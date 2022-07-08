@@ -1,0 +1,36 @@
+### USER INTERFACE 
+
+# FONT
+font pango: FontAwesome 8
+
+# BACKGROUND
+output * bg .data/background/forest.jpg fill
+#output DP-1 {
+#    bg .data/background/forest.jpg fill
+#    pos 0 0
+#}
+#output DP-3 {
+#    bg .data/background/forest.jpg fill
+#    transform 90
+#}
+
+# GAPS AND BORDERS
+gaps inner 8
+gaps outer 3 
+default_border pixel 1
+smart_borders on
+#hide_edge_borders both
+for_window [class=".*"] border pixel 1
+
+client.focused          #4fe0cf #2f343f #d8dee8 #d8dee8 #4fe0cf
+client.focused_inactive #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.unfocused        #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.urgent           #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.placeholder      #2f343f #2f343f #d8dee8 #2f343f #2f343f
+client.background       #2f343f
+
+exec_always {
+    gsettings set org.gnome.desktop.interface gtk-theme 'Midnight-Gray'
+    gsettings set org.gnome.desktop.wm.preferences 'Midnight-Gray'
+    gsettings set org.gnome.desktop.interface icon-theme 'BlackoutIcons'
+}

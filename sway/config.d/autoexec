@@ -1,0 +1,5 @@
+#exec_always ~/.config/wayar/waybar.sh
+exec mako
+exec_always --no-startup-id workstyle &> /tmp/workstyle.log
+# swayidle
+# swaylock

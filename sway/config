@@ -1,0 +1,55 @@
+# PRIMARY KEYS
+    # Logo key. Use Mod1 for Alt.
+    set $mod Mod4
+    set $alt Mod1
+    
+# ALTERNATIVE NAVIGATION KEYS
+    # Home row direction keys, like vim
+    set $left h
+    set $down j
+    set $up k
+    set $right l
+
+# DEFAULT APP
+    # Terminal
+    set $term alacritty
+
+# Workspaces
+    set $1 1
+    set $2 2
+    set $3 3
+    set $4 4
+    set $5 5
+    set $6 6
+    set $7 7
+    set $8 8
+    set $9 9
+    set $0 10
+
+    assign [class=alacritty] $1
+    assign [class=firefox] $2
+    assign [class=intellij-idea] $3
+    #assign [class=Telegram|Thunderbird] $6
+    #assign [class=Audacity|Vlc|Audacious|mpv|Xfburn] $7
+    #assign [class=Gimp*|Inkscape] $8
+    #assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|qt*|Kvantum*|Pavucontrol|Exo-helper*|Lxrandr|Arand|Nitrogen|Gnome-disks] $9
+    #for_window [class=Viewnior|feh|Telegram|Ramme|MPlayer|File-roller|Lxappearance|Lxtask|Pavucontrol|XTerm|calculator] floating enable
+    #for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity] focus
+    #for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr] focus
+    #for_window [class=Nautilus] floating enable,resize set 1100 640
+    #for_window [class=XTerm] move position 600 200
+    #for_window [class="Oblogout"] fullscreen enable
+    #for_window [class=MPlayer] move position 600 200
+    #for_window [title="MPlayer"] floating enable
+    #for_window [title="MPlayer"] sticky enable
+    #for_window [title="MPlayer"] border pixel 0
+    #for_window [class=MPlayer] move position 1042 500
+
+bar {
+    swaybar_command waybar
+    #icon_theme ubuntu-mono-light
+}
+
+#exec mako
+#xwayland disable
+include ~/.config/sway/config.d/*
