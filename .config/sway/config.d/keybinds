@@ -98,7 +98,7 @@ set $menu wofi -c ~/.config/wofi/config -I
     bindsym $mod+Alt+q kill
     
     # Open the power menu
-    bindsym $mod+Shift+e exec $powermenu
+    bindsym $mod+Shift+q exec $powermenu
 
     # Reload config:
     bindsym $mod+Shift+r reload
