@@ -138,7 +138,7 @@ set $menu wofi -c ~/.config/wofi/config -I
     # Screenshot:
     bindsym $mod+Shift+s exec ~/.config/sway/config.d/.data/scripts/screenshot.sh
     # bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
-    # bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
+    # bindsym Shift+print exec ~/.config/sway/config.d/.data/scripts/screenshot.sh
 	# TODO: specified differents between methods
 
 	# Idle configuration
@@ -152,7 +152,7 @@ set $menu wofi -c ~/.config/wofi/config -I
 	# resumed. It will also lock your screen before your computer goes to sleep.
 
 	# Screen Lock:
-	bindsym $mod+Alt+l exec ~/.config/sway/scripts/lockman.sh
+	bindsym $mod+Alt+l exec ~/.config/sway/config.d/.data/scripts/lockman.sh
 
 	# Keybindings List
     bindsym $mod+$alt+h exec xed ~/.config/sway/cheatsheet
