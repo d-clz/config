@@ -1,0 +1,51 @@
+# Config for sworkstyle
+
+# Standard
+# '{pattern}' = '{icon}'
+#
+# pattern: Can either be the exact 'app_name' (app_id/class) of the window or a regex string in the format of `'/{regex}/'` which will match the window 'title'.
+# icon: Your beautiful icon
+
+# Verbose
+# '{pattern}' = { type = 'generic' | 'exact', value = '{icon}' }
+
+fallback = ''
+
+[matching]
+'discord' = ''
+'balena-etcher' = ''
+'Chia Blockchain' = ''
+'Steam' = ''
+'vlc' = ''
+'org.qbittorrent.qBittorrent' = ''
+'Thunderbird' = ''
+'thunderbird' = ''
+'Postman' = ''
+'Insomnia' = ''
+'Bitwarden' = ''
+'Google-chrome' = ''
+'Chromium' = ''
+'Slack' = ''
+'Code' = ''
+'code-oss' = ''
+'jetbrains-studio' = ''
+'Spotify' = ''
+'GitHub Desktop' = ''
+'/(?i)Github.*Firefox/' = ''
+'firefox' = ''
+'Nightly' = ''
+'firefoxdeveloperedition' = ''
+'/nvim ?\w*/' = ''
+'/npm/' = ''
+'/node/' = ''
+'/yarn/' = ''
+'Alacritty' = ''
+'robo3t' = ''
+'rdm' = ''
+'google' = ''
+'jenkins' = ''
+'firefox' = ''
+'file manager' = ''
+'gthumb' = ''
+'disk usage' = ''
+'settings' = ''
