@@ -1,9 +1,33 @@
+
+@keyframes blink-warning {
+    70% {
+        color: white;
+    }
+
+    to {
+        color: white;
+        background-color: orange;
+    }
+}
+
+@keyframes blink-critical {
+    70% {
+        color: white;
+    }
+
+    to {
+        color: rgb(175, 95, 95);
+        background-color: rgb(175, 95, 95);
+    }
+}
+
 * {
     border: none;
     border-radius: 0;
     font-family: Iosevka, Source Code Pro, Noto Sans, sans-serif;
     font-size: 14px;
     min-height: 0;
+    margin: 1px;
 }
 
 window#waybar {
