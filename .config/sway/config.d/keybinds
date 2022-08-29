@@ -1,6 +1,6 @@
 ### DEFINITIONS
 set $powermenu ~/.config/waybar/scripts/power-menu.sh
-set $menu wofi -c ~/.config/wofi/config -I
+set $menu wofi -c ~/.config/wofi/config -I --show drun -p 'Type to search...'
 
 ### KEYBINDS MAPPING
 
