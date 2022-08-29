@@ -6,3 +6,6 @@ lines=6
 no_actions=true
 term=alacritty
 width=600
+always_parse_args=true
+display_generic=true
+location=center

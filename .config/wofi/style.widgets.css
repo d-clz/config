@@ -8,18 +8,11 @@
     font-family: UbuntuMono;
 }
 
-window {
+#window {
     opacity: 0.9;
-    margin: 5px;
     border: 1px solid #4fe0cf;
-    border-radius: 10px;
-    background-color: #27292e;
-}
-
-#input {
     margin: 5px;
-    border: none;
-    color: #5a5d66;
+    border-radius: 5px;
     background-color: #27292e;
 }
 
@@ -30,21 +23,16 @@ window {
 }
 
 #outer-box {
-    margin: 5px;
     border: none;
     background-color: #27292e;
-}
-
-#scroll {
-    margin: 0px;
-    border: none;
+    margin-top: -22px;
 }
 
 #text {
     margin: 5px;
     border: none;
-    color: #f8f8f2;
-} 
+    color: white;
+}
 
 #entry:selected {
     background-color: #41444d;
