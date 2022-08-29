@@ -1,10 +1,16 @@
+### DEFINITIONS
+set $powermenu ~/.config/waybar/scripts/power-menu.sh
+set $menu wofi -c ~/.config/wofi/config -I
+
 ### KEYBINDS MAPPING
 
 # APPLICATION SHORTCUTS
     # Terminal
     bindsym $mod+Return exec $term; workspace number 1
+
     # Launcher
-    bindsym $mod+Space exec wofi --show drun -p 'Type to search...'
+    bindsym $mod+Space exec $menu
+
     # Firefox
     bindsym $mod+f exec firefox; workspace number 2 
 
@@ -17,6 +23,12 @@
     # Mode:
     bindsym $mod+Shift+f fullscreen
     bindsym $mod+Shift+Space floating toggle
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
     floating_modifier $mod normal
     
     # Scratchpad:
@@ -85,11 +97,14 @@
     # Kill focused window:
     bindsym $mod+Alt+q kill
     
-    # Logout sway:
-    bindsym $mod+Shift+q exec swaynag -m 'Do you want to end Wayland session?' --background=4fe0cf --button-background=4fe0cf --button-padding=10 --button-border-size=0 --text=2b303b --message-padding=10 -b 'Yes, logout' 'swaymsg exit'
+    # Open the power menu
+    bindsym $mod+Shift+e exec $powermenu
 
     # Reload config:
     bindsym $mod+Shift+r reload
+
+    # Activities
+    bindsym $mod+p exec ~/.config/wofi/windows.py
 
     # resize window (you can also use the mouse for that):
     bindsym $mod+r mode "resize"
@@ -122,6 +137,23 @@
 
     # Screenshot:
     bindsym $mod+Shift+s exec ~/.config/sway/config.d/.data/scripts/screenshot.sh
+    # bindsym print exec /usr/share/sway/scripts/grimshot --notify save output
+    # bindsym Shift+print exec ~/.config/sway/scripts/screenshot.sh
+	# TODO: specified differents between methods
 
-    # Screen Lock:
-    bindsym $mod+Alt+l exec swaylock -C ~/.config/swaylock/config
+	# Idle configuration
+	exec swayidle -w\
+	    timeout 1070 'swaylock -f -C ~/.config/swaylock/config'\
+	    timeout 770 'swaymsg "output * dpms off"' \
+	    resume 'swaymsg "output * dpms on"' \
+	    before-sleep 'swaylock -C ~/.config/swaylock/config'
+	# This will lock your screen after 300 seconds of inactivity, then turn off
+	# your displays after another 300 seconds, and turn your screens back on when
+	# resumed. It will also lock your screen before your computer goes to sleep.
+
+	# Screen Lock:
+	bindsym $mod+Alt+l exec ~/.config/sway/scripts/lockman.sh
+
+	# Keybindings List
+    bindsym $mod+$alt+h exec xed ~/.config/sway/cheatsheet
+
