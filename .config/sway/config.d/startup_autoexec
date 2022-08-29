@@ -5,7 +5,7 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 
 # Workstyle icon
-exec_always --no-startup-id workstyle &> /tmp/workstyle.log
+exec_always --no-startup-id sworkstyle &> /tmp/workstyle.log
 
 # Network Applet
 exec nm-applet --indicator
