@@ -1,5 +1,6 @@
 ignore-empty-password
-#font=Ubuntu
+font=UbuntuMono
+font-size=20
 
 clock
 timestr=%H:%M:%S

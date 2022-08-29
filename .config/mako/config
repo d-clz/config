@@ -11,6 +11,9 @@ border-color=#41444d
 border-radius=5
 default-timeout=10000
 group-by=summary
+icon-path=/usr/share/icons/Arc-X-D
+
+[urgency=high]
 
 [grouped]
 format=<b>%s</b>\n%b
