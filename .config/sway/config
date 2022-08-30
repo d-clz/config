@@ -70,3 +70,6 @@
 	for_window [app_id="Chromium"] inhibit_idle fullscreen
 
 include ~/.config/sway/config.d/*
+
+
+# TODO: https://github.com/dln/wofi-emoji

@@ -4,8 +4,8 @@
 font pango: FontAwesome 8
 
 # BACKGROUND
-output * bg .data/background/forest.jpg fill
-# exec swaybg -i ~/.config/sway/sway.png
+# output * bg .data/background/forest.jpg fill
+exec swaybg -i ~/.config/sway/.data/background/seashore.jpg
 
 #output DP-1 {
 #    bg .data/background/forest.jpg fill

@@ -29,10 +29,9 @@
     margin: 1px;
 }
 
-window#waybar {
-    background: rgba(43, 48, 59, 1);
-    border-bottom: 0px solid rgba(100, 114, 125, 1);
-    color: #ffffff;
+#waybar {
+    background: #404552;
+    color: #bebebe;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -41,22 +40,17 @@ window#waybar {
     font-weight: bold;
     font-family: "Noto Sans";
 }
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
+
 #workspaces button {
-    padding: 0 10px;
-    font-size: 24px;
+    padding: 0px;
     background: transparent;
-    color: white;
-    border-top: 2px solid transparent;
+    color: #bebebe;
+    border-bottom: 2px solid transparent;
 }
 
 #workspaces button.focused {
-    color: rgb(180, 224, 207);  
-    border-top: 2px solid rgb(79, 224, 207);
+    color: #bebebe;
+    border-bottom: 2px solid #5294e2;
 }
 
 #workspaces button.urgent {
@@ -65,8 +59,10 @@ window#waybar {
 }
 
 #mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    background: #5294e2;
+    border-bottom: 3px transparent;
+    color: #bebebe;
+    margin-left: 5px;
 }
 
 #custom-power {
@@ -97,17 +93,10 @@ window#waybar {
 }
 
 #battery icon {
-    color: red;
+    color: rgb(175, 95, 95);
 }
 
 #battery.charging {
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
 }
 
 #battery.warning:not(.charging) {
@@ -120,15 +109,22 @@ window#waybar {
 }
 
 #cpu {
-    color: #8FAFD7
+    color: #bebebe;
+}
+#cpu.warning {
+    color: #db884d;
+}
+
+#cpu.critical {
+    color: rgb(175, 95, 95);
 }
 
 #memory {
-    color: #8FAFD7
+    color: #bebebe;
 }
 
 #network {
-    color: #d6fffa
+    color: #bebebe;
 }
 
 #network.disconnected {
@@ -150,7 +146,7 @@ window#waybar {
 }
 
 #tray {
-    background-color: #2b303b ;
-    color: #FFFFFF;
+    background-color: #404552 ;
+    color: #bebebe;
 }
 

@@ -8,6 +8,10 @@ grim
 slurp
 mako
 wofi
+libwayland-dev
+libgtk-3-dev
+pkg-config
+meson
 sddm
 jq
 lxappearance

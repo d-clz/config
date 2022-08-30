@@ -4,6 +4,11 @@
  *
  * */
 
+@define-color highlight #5294e2;
+@define-color background  #27292e;
+@define-color selected  #40455;
+@define-color text #bebebe;
+
 *{
     font-family: UbuntuMono;
 }
@@ -11,28 +16,28 @@
 window {
     opacity: 0.9;
     margin: 5px;
-    border: 1px solid #4fe0cf;
+    border: 1px solid @highlight;
     border-radius: 10px;
-    background-color: #27292e;
+    background-color: @background;
 }
 
 #input {
     margin: 5px;
     border: none;
-    color: #5a5d66;
-    background-color: #27292e;
+    color: @text;
+    background-color: @background;
 }
 
 #inner-box {
     margin: 5px;
     border: none;
-    background-color: #27292e;
+    background-color: @background;
 }
 
 #outer-box {
     margin: 5px;
     border: none;
-    background-color: #27292e;
+    background-color: @background;
 }
 
 #scroll {
@@ -43,8 +48,8 @@ window {
 #text {
     margin: 5px;
     border: none;
-    color: #f8f8f2;
-} 
+    color: @text;
+}
 
 #entry:selected {
     background-color: #41444d;
