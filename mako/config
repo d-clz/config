@@ -1,0 +1,19 @@
+anchor=bottom-right
+font=monospace 10
+
+background-color=#27292e
+text-color=#4fe0cf
+width=350
+margin=0,20,20
+padding=10
+border-size=1
+border-color=#41444d
+border-radius=5
+default-timeout=10000
+group-by=summary
+icon-path=/usr/share/icons/Arc-X-D
+
+[urgency=high]
+
+[grouped]
+format=<b>%s</b>\n%b

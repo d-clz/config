@@ -1,0 +1,15 @@
+hide_scroll=true
+show=drun
+width=25%
+lines=6
+line_wrap=word
+term=alacritty
+allow_markup=true
+always_parse_args=true
+print_command=true
+layer=overlay
+allow_images=false
+insensitive=true
+image_size=0
+display_generic=true
+location=center

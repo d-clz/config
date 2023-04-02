@@ -1,0 +1,40 @@
+/*
+ * Teal:        #4fe0cf
+ * Dark Blue:   #27292e
+ *
+ * */
+
+*{
+    font-family: UbuntuMono;
+}
+
+#window {
+    opacity: 0.9;
+    border: 1px solid #4fe0cf;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #27292e;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #27292e;
+}
+
+#outer-box {
+    border: none;
+    background-color: #27292e;
+    margin-top: -22px;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: white;
+}
+
+#entry:selected {
+    background-color: #41444d;
+    border-radius: 5px;
+}

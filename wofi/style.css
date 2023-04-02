@@ -1,0 +1,57 @@
+/*
+ * Teal:        #4fe0cf
+ * Dark Blue:   #27292e
+ *
+ * */
+
+@define-color highlight #5294e2;
+@define-color background  #27292e;
+@define-color selected  #40455;
+@define-color text #bebebe;
+
+*{
+    font-family: UbuntuMono;
+}
+
+window {
+    opacity: 0.9;
+    margin: 5px;
+    border: 1px solid @highlight;
+    border-radius: 10px;
+    background-color: @background;
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: @text;
+    background-color: @background;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: @background;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: @background;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: @text;
+}
+
+#entry:selected {
+    background-color: #41444d;
+    border-radius: 5px;
+}
