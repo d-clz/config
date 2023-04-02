@@ -1,0 +1,112 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar at the bottom of your screen
+    "height": 25, // Waybar height
+    // "width": 1366, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["custom/clock"],
+    "modules-right": [
+        "tray",
+        "custom/weather",
+        "network",
+        "network#vpn",
+        "pulseaudio",
+        "temperature",
+        "cpu",
+        "memory"
+    ],
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": false,
+        "format": "{icon}"
+        //"format-icons": {
+        //    "1": "1:  ",
+        //    "2": "2:  ",
+        //    "3": "3:  ",
+        //    "4": " Steam",
+        //    "5": " Social",
+        //    "6": " Gaming",
+        //    "7": " Graphics",
+        //    "8": " Files",
+        //    "9": " Settings",
+        //}
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10
+    },
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+        "critical-threshold": 90,
+        "interval": 5,
+        "format": "{icon} {temperatureC}°",
+        "format-icons": [
+            "", // Icon: temperature-empty
+            "", // Icon: temperature-quarter
+            "", // Icon: temperature-half
+            "", // Icon: temperature-three-quarters
+            ""  // Icon: temperature-full
+        ]
+    },
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "~/.config/waybar/modules/weather.sh",
+        "return-type": "json"
+    },
+    "custom/clock": {
+        "exec": "echo '  '$(date +'%H:%M')'  '",
+        "interval": 5
+    },
+    "cpu": {
+        "format": "{usage:2}% "
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "network": {
+        // "interface": "wlp2s0", // (Optional) To force the use of this interface
+        "format-wifi": "{bandwidthUpBits:3} ⇅ {bandwidthDownBits:3}",
+        "format-ethernet": "{bandwidthUpBits:3} ⇅ {bandwidthDownBits:3}",
+        "format-disconnected": "Disconnected  ",
+  	    "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+  	    "tooltip-format-ethernet": "{ipaddr}/{cidr}  ",
+  	    "tooltip-format-disconnected": "No Internet Connection!"
+    },
+    "network#vpn": {
+        "interface": "abivin",
+        "format-wifi": " ",
+        "format-ethernet": " ",
+        "format-disconnected": " ",
+        "tooltip-format-disconnected": "No VPN Connected!",
+        "tooltip-format-ethernet": "Wireguard: {ifname}"
+        //"on-click": "~/.config/waybar/modules/toggle-vpn.sh"
+    },
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "M",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol",
+        //"tooltip": "{exec echo "hello"}"
+    },
+    "custom/spotify": {
+        "format": " {}",
+        "max-length": 40,
+        "interval": 30, // Remove this if your script is endless and write in loop
+        "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
+        "exec-if": "pgrep spotify"
+    }
+}
+
